@@ -13,7 +13,7 @@ const App = () => {
   // Fetch books from the backend
   const fetchBooks = async () => {
     try {
-      const response = await fetch('https://book-collection-system-wxn8.vercel.app//books'); // Adjust the endpoint URL if necessary
+      const response = await fetch('https://book-collection-system-wxn8.vercel.app/books'); // Adjust the endpoint URL if necessary
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -27,7 +27,7 @@ const App = () => {
   // Add a new book
   const handleAddBook = async (newBook) => {
     try {
-      const response = await fetch('https://book-collection-system-wxn8.vercel.app//books', {
+      const response = await fetch('https://book-collection-system-wxn8.vercel.app/books', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const App = () => {
   // Delete a book
   const handleDeleteBook = async (id) => {
     try {
-      const response = await fetch(`https://book-collection-system-wxn8.vercel.app//books/${id}`, {
+      const response = await fetch(`https://book-collection-system-wxn8.vercel.app/books/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
